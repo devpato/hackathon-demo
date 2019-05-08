@@ -1,3 +1,14 @@
-<p>
-  home works!
-</p>
+<div class="home-page">
+  <div class="container">
+    <button class="camera" (click)="OnGetCameraData()">Get Camera Data</button>
+    <button class="recognition" (click)="OnGetImageData()">Get Image Data</button>
+    <div class="results">
+      <div class="results-camera">
+        {{$cameraData | async | json}}
+      </div>
+      <div class="recognition">
+        {{$recognitionData | async | json}}
+      </div>
+    </div>
+  </div>
+</div>
